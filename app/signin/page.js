@@ -42,7 +42,7 @@ export default function SignIn() {
 
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      router.push('/'); // Redirect to home or another page after successful sign-in
+      router.push('/main'); // Redirect to home or another page after successful sign-in
     } catch (error) {
       console.error('Error signing in:', error.message);
       setError('Incorrect email or password.'); // Set error message based on the error
@@ -101,6 +101,7 @@ export default function SignIn() {
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
+              
             >
               Sign In
             </Button>

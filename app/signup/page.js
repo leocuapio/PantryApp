@@ -41,7 +41,7 @@ export default function SignUp() {
 
     try {
       await createUserWithEmailAndPassword(auth, email, password);
-      router.push('/'); // Redirect to home or another page after successful sign-up
+      router.push('/main'); // Redirect to home or another page after successful sign-up
     } catch (error) {
       console.error('Error signing up:', error.message);
       // Handle error (e.g., show an error message to the user)
